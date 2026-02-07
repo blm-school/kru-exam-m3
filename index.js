@@ -27,7 +27,7 @@ async function initExam() {
         displayCount.innerText = currentCount;
 
         if (isLocked === "true") {
-            if(awayCount > 0){showLock()}               
+            if(awayCount > 0){showLock();}               
         }
 
     } catch (error) {
@@ -50,7 +50,7 @@ document.addEventListener("visibilitychange", () => {
 
     // ล็อกหน้าจอ
     localStorage.setItem("isLocked", "true");
-    showLock();
+    if(awayCount > 0){showLock();}
   }
 });
 
@@ -109,6 +109,7 @@ document.addEventListener("keydown", (e) => {
     alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
   }
 });
+
 
 
 
