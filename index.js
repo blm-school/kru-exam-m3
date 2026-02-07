@@ -23,7 +23,7 @@ async function initExam() {
 
         // --- เช็คสถานะการล็อกต่อทันทีที่ได้รหัสผ่าน ---
         const isLocked = localStorage.getItem("isLocked");
-        const currentCount = localStorage.getItem("awayCount") || 0;
+        const currentCount = localStorage.getItem("awayCount") || -1;
         displayCount.innerText = currentCount;
 
         if (isLocked === "true") {
@@ -109,3 +109,4 @@ document.addEventListener("keydown", (e) => {
     alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
   }
 });
+
